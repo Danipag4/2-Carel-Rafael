@@ -71,13 +71,20 @@ fig_Perg = px.bar(df_filtered2, y="Pergunta", x=aval, orientation="h", barmode='
 fig_Perg.update_layout(xaxis_title="Médias", yaxis_title="Perguntas")
 fig_Perg
 
+#coment = st.checkbox("Comentários")
+#df_filtered2
+#if coment:
+#    df_coment = df_filtered2.iloc[:,3:5]
+#    df_coment
+
+
+
 coment = st.checkbox("Comentários")
 #df_filtered2
+df_Comenta=df_filtered2["Comentários"].dropna().reset_index(drop = True)
+#df_Comenta
 if coment:
-    df_coment = df_filtered2.iloc[:,3:5]
-    df_coment
-
-
+    df_Comenta
 
 #-----------------------------------------------------------------------------------------
 
